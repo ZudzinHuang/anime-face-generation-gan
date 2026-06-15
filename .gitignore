@@ -1,0 +1,31 @@
+﻿# Python environments: never commit these. They contain multi-GB package files and GitHub rejects several >100MB files.
+.venv/
+.venv310/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local environment/secrets
+.env
+.env.*
+
+# Only exclude the old/temporary run archives requested
+runs_archive/
+runs_cpu_short/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

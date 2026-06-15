@@ -1,0 +1,11 @@
+{
+  "split_seed": 360,
+  "split_ratio": "80/20 train/test",
+  "source_cleaned_dir": "E:\\Documents\\Coding\\APS360 Project\\data\\processed\\anime_faces_64",
+  "train_dir": "E:\\Documents\\Coding\\APS360 Project\\data\\split_80_20_seed360\\train\\anime_faces",
+  "test_dir": "E:\\Documents\\Coding\\APS360 Project\\data\\split_80_20_seed360\\test\\anime_faces",
+  "total_cleaned_images": 21551,
+  "train_images": 17241,
+  "test_images": 4310,
+  "heldout_test_grid": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\heldout_real_test_samples_seed360.png"
+}

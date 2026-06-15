@@ -1,0 +1,68 @@
+{
+  "dataset": {
+    "source": "Kaggle Anime Faces",
+    "total_cleaned_images": 21551,
+    "train_images": 17241,
+    "heldout_test_images": 4310,
+    "split": "80/20 train/test",
+    "split_seed": 360,
+    "processed_format": "64x64 RGB PNG",
+    "normalization": "ToTensor then Normalize((0.5,0.5,0.5),(0.5,0.5,0.5)); maps pixels to approximately [-1, 1]",
+    "train_dir": "E:\\Documents\\Coding\\APS360 Project\\data\\split_80_20_seed360\\train\\anime_faces",
+    "heldout_test_dir": "E:\\Documents\\Coding\\APS360 Project\\data\\split_80_20_seed360\\test\\anime_faces"
+  },
+  "dcgan": {
+    "z_dim": 100,
+    "batch_size": 128,
+    "epochs": 30,
+    "batches_per_epoch": 135,
+    "learning_rate": 0.0002,
+    "optimizer": "Adam",
+    "betas": [
+      0.5,
+      0.999
+    ],
+    "generator_params": 3576704,
+    "discriminator_params": 2765568,
+    "total_params": 6342272,
+    "final_metrics": {
+      "epoch": "30",
+      "g_loss": "4.919181652422305",
+      "d_loss": "0.3823649627191049",
+      "n_images": "17241"
+    }
+  },
+  "wgan_gp": {
+    "z_dim": 100,
+    "batch_size": 64,
+    "epochs": 30,
+    "batches_per_epoch": 270,
+    "learning_rate": 0.0001,
+    "optimizer": "Adam",
+    "betas": [
+      0.0,
+      0.9
+    ],
+    "lambda_gp": 10.0,
+    "critic_steps": 5,
+    "generator_params": 3576704,
+    "critic_params": 2763776,
+    "total_params": 6340480,
+    "final_metrics": {
+      "epoch": "30",
+      "g_loss": "1.9902683475779162",
+      "critic_loss": "-11.122992240058052",
+      "gradient_penalty": "0.1728755613444028",
+      "n_images": "17241"
+    }
+  },
+  "report_figures": {
+    "heldout_real_test_samples": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\heldout_real_test_samples_seed360.png",
+    "cleaned_real_training_samples": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\cleaned_real_training_samples.png",
+    "dcgan_loss_curves": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\dcgan_loss_curves.png",
+    "wgan_gp_loss_curves": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\wgan_gp_loss_curves.png",
+    "metrics_summary_table": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\training_metrics_summary_table.png",
+    "dcgan_final_generated_samples": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\dcgan_final_generated_samples_seed360.png",
+    "wgan_gp_final_generated_samples": "E:\\Documents\\Coding\\APS360 Project\\report_figures\\wgan_gp_final_generated_samples_seed360.png"
+  }
+}
